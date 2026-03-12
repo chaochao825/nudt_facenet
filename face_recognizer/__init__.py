@@ -1,3 +1,8 @@
-from .facenet_model import FaceNetModel
+__all__ = []
 
-__all__ = ['FaceNetModel']
+try:
+    from .facenet_model import FaceNetModel
+
+    __all__.append("FaceNetModel")
+except Exception:
+    FaceNetModel = None
